@@ -1,0 +1,25 @@
+word=input("Enter a word to check the number of vowels in it:")
+count=0
+length=len(word)
+letter=0
+
+while letter<length: #must be less than bc word will be too long otherwise
+	if word[letter]=="a" or word[letter]=="e" or word[letter]=="i" or word[letter]=="o" or word[letter]=="u":
+		count+=1
+		letter+=1
+	elif word[letter]!="a" or word[letter]!="e" or word[letter]!="i" or word[letter]!="o" or  word[letter]!="u":
+		letter+=1
+		count=count
+	else:
+		break
+print("The word", word, "contains", count, "vowels")
+
+
+#or
+
+word=input("Enter word:")
+
+for letter in word:
+	if letter.lower() in "aeiou": #this converts the letters into lower case letters. Need to do this bc the aeiou are in lower case (the vowels)!
+		count+=1
+print("Count of vowels is:", count)
